@@ -29,12 +29,13 @@ export default function App() {
     }
   };
 
-  const handlePrefilledEstimator = (planText: string) => {
-    setPrefilledPlan(planText);
-    setTimeout(() => {
-      scrollToSection("contact");
-    }, 100);
-  };
+    const handlePrefilledEstimator = (planText?: string) => {
+      setPrefilledPlan(planText || "");
+
+      setTimeout(() => {
+        scrollToSection("contact");
+      }, 100);
+    };
 
   return (
     <div className="min-h-screen bg-slate-950 antialiased font-sans text-slate-100 selection:bg-sky-500 selection:text-slate-950">
@@ -44,6 +45,7 @@ export default function App() {
           setPrefilledPlan("");
           scrollToSection("contact");
         }}
+        onAboutClick={() =>scrollToSection("about")}
         onServicesClick={() => scrollToSection("services")}
         onPortfolioClick={() => scrollToSection("portfolio")}
         onProcessClick={() => scrollToSection("process")}
@@ -65,7 +67,7 @@ export default function App() {
         <TrustedLogos />
 
         {/* Corporate introduction segment */}
-        <About />
+        <About/>
 
         {/* Interactive service catalog + estimator widget */}
         <Services onContactClick={handlePrefilledEstimator} />

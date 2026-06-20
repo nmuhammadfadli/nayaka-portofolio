@@ -6,6 +6,7 @@ interface NavbarProps {
   onServicesClick: () => void;
   onPortfolioClick: () => void;
   onProcessClick: () => void;
+  onAboutClick: () => void;
   onFaqClick: () => void;
 }
 
@@ -13,7 +14,9 @@ export default function Navbar({
   onContactClick,
   onServicesClick,
   onPortfolioClick,
+  onAboutClick,
   onProcessClick,
+
   onFaqClick,
 }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false);
@@ -29,6 +32,7 @@ export default function Navbar({
   }, []);
 
   const menuItems = [
+    { label: "Tentang Kami", action: onAboutClick},
     { label: "Layanan", action: onServicesClick },
     { label: "Portfolio", action: onPortfolioClick },
     { label: "Cara Kerja", action: onProcessClick },
