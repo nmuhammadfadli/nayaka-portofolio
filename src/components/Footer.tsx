@@ -39,17 +39,7 @@ export default function Footer() {
             </p>
 
             {/* Social icons */}
-            <div className="flex gap-3">
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="p-2.5 bg-slate-900 border border-slate-800 hover:bg-sky-500 text-slate-450 text-slate-400 hover:text-slate-950 rounded-lg transition-all cursor-pointer" aria-label="LinkedIn Profile">
-                <Linkedin className="w-4 h-4" />
-              </a>
-              <a href="https://github.com/nayakalabs" target="_blank" rel="noreferrer" className="p-2.5 bg-slate-900 border border-slate-800 hover:bg-sky-500 text-slate-450 text-slate-400 hover:text-slate-950 rounded-lg transition-all cursor-pointer" aria-label="GitHub Profile">
-                <Github className="w-4 h-4" />
-              </a>
-              <a href="https://wa.me/62215088899" target="_blank" rel="noreferrer" className="p-2.5 bg-slate-900 border border-slate-800 hover:bg-sky-500 text-slate-450 text-slate-400 hover:text-slate-950 rounded-lg transition-all cursor-pointer" aria-label="WA Business">
-                <MessageSquareCode className="w-4 h-4" />
-              </a>
-            </div>
+        
           </div>
 
           {/* Col 2 & 3: Menus (4 cols) */}
