@@ -55,9 +55,7 @@ export default function About() {
                 <span className="text-xs text-sky-400 font-mono block font-bold leading-none mb-1">REKAYASA INDONESIA</span>
                 <span className="text-sm font-semibold text-slate-200">Standard Mutu Premium & Ramah SEO</span>
               </div>
-              <div className="w-10 h-10 rounded-full bg-sky-500/10 flex items-center justify-center text-sky-400 border border-sky-500/20 text-xs font-bold">
-                PRO
-              </div>
+         
             </div>
           </div>
 

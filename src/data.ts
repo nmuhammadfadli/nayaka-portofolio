@@ -13,7 +13,7 @@ export const SERVICES: Service[] = [
       "Struktur Kode Bersih & Responsif Lintas Gadget",
       "Situs Portfolio, Toko Online, & Platform SaaS"
     ],
-    techs: ["PHP", "Laravel","React", "TypeScript", "Next.js", "Tailwind CSS", "Node.js"],
+    techs: ["PHP", "Laravel","React", "TypeScript", "Tailwind CSS", ],
     badge: "Populer"
   },
   {
@@ -43,7 +43,7 @@ export const SERVICES: Service[] = [
       "Performa Sangat Ringan dengan Resource Rendah"
     ],
     techs: ["Java", "Netbeans"],
-    badge: "Spesialis"
+   
   },
   {
     id: "seo-opt",
@@ -87,7 +87,7 @@ export const CLIENT_LOGOS = [
 ];
 
 export const ABOUT_STATS = [
-  { value: "5+", label: "Ahli Web & Desainer Kreatif" },
+  { value: "5", label: "Ahli Web & Desainer Kreatif" },
   { value: "10+", label: "Aplikasi Sukses Diluncurkan" },
   { value: "100%", label: "Skor Kepuasan Klien Partner" },
   { value: "24 Jam", label: "Waktu Respon Dukungan" }

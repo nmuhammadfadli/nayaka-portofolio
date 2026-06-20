@@ -32,7 +32,7 @@ export default function Navbar({
   }, []);
 
   const menuItems = [
-    { label: "Tentang Kami", action: onAboutClick},
+    { label: "Tentang Kami", action: onAboutClick },
     { label: "Layanan", action: onServicesClick },
     { label: "Portfolio", action: onPortfolioClick },
     { label: "Cara Kerja", action: onProcessClick },
@@ -40,28 +40,27 @@ export default function Navbar({
   ];
 
   return (
- <header
-  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-    scrolled
-      ? "bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80 py-3 shadow-lg shadow-slate-950/20"
-      : "bg-transparent py-4"
-  }`}
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+        ? "bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80 py-3 shadow-lg shadow-slate-950/20"
+        : "bg-transparent py-4"
+        }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
           {/* Logo */}
-   <div
-  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-  className="relative shrink-0 w-[220px] h-14 md:h-16 cursor-pointer group overflow-visible"
-  aria-label="Nayaka Labs Home"
->
-  <img
-    src="/portofolio/logo_nayakalabs_bgputih2.png"
-    alt="Nayaka Labs"
-   className="absolute left-0 top-1/2 -translate-y-1/2 h-24 md:h-28 lg:h-32 w-auto max-w-none object-contain"
-  />
-</div>
-         
+          <div
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+            className="relative shrink-0 w-[220px] h-14 md:h-16 cursor-pointer group overflow-visible"
+            aria-label="Nayaka Labs Home"
+          >
+            <img
+              src="/portofolio/logo_nayakalabs_bgputih2.png"
+              alt="Nayaka Labs"
+              className="absolute left-0 top-1/2 -translate-y-1/2 h-24 md:h-28 lg:h-32 w-auto max-w-none object-contain"
+            />
+          </div>
+
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-8">

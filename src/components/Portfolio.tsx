@@ -44,7 +44,7 @@ export default function Portfolio({ onContactClick }: PortfolioProps) {
   const [filter, setFilter] = useState<string>("All");
   const [activeHighlightId, setActiveHighlightId] = useState<string>("svara");
 
-  const categories = ["All", "Web App", "Mobile App", "Desktop App", "SEO Optimization"];
+  const categories = ["All", "Web App", "Mobile App", "Desktop App"];
 
   const filteredPortfolios = filter === "All" 
     ? PORTFOLIOS 

@@ -265,7 +265,7 @@ export default function Hero({ onContactClick, onServicesClick }: HeroProps) {
                   <div className="space-y-4 animate-in fade-in duration-200">
                     <div className="bg-slate-950 rounded-lg p-3 text-slate-250 font-mono text-[10px] border border-slate-800 overflow-hidden space-y-1">
                       <div className="text-sky-400">
-                        &gt; Website lebih mudah dibaca mesin pencari
+                        &gt; Website lebih mudah dicari di google
                       </div>
                       <div className="text-emerald-400">
                         ✔ Struktur konten lebih jelas
