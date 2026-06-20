@@ -35,7 +35,7 @@ export default function Footer() {
             </div>
 
             <p className="font-sans text-xs text-slate-400 leading-relaxed">
-              Studio teknologi & digital product engineering kelas dunia di Indonesia. Kami merekayasa solusi web, mobile, dan sistem pintar kecerdasan buatan (AI) yang cepat, aman, dan auto-scaling.
+              Nayaka Labs adalah studio pengembangan software yang membantu bisnis, UMKM, dan organisasi membangun website, aplikasi mobile, serta sistem digital yang modern, aman, dan siap berkembang bersama bisnis Anda.
             </p>
 
             {/* Social icons */}
@@ -52,8 +52,9 @@ export default function Footer() {
               <ul className="space-y-2.5 text-xs text-slate-400">
                 <li><a href="#services" className="hover:text-sky-400 transition-colors">SaaS & Custom Web</a></li>
                 <li><a href="#services" className="hover:text-sky-400 transition-colors">Mobile App Dev</a></li>
-                <li><a href="#services" className="hover:text-sky-400 transition-colors">Enterprise AI</a></li>
-                <li><a href="#services" className="hover:text-sky-400 transition-colors">Cloud & DevOps</a></li>
+                <li><a href="#services" className="hover:text-sky-400 transition-colors">UI / UX Design</a></li>
+                <li><a href="#services" className="hover:text-sky-400 transition-colors">Desktop App Development</a></li>
+                <li><a href="#services" className="hover:text-sky-400 transition-colors">SEO Optimization</a>  </li>
               </ul>
             </div>
 

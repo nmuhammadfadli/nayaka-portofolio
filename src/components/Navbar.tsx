@@ -36,47 +36,28 @@ export default function Navbar({
   ];
 
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80 py-3 shadow-lg shadow-slate-950/20"
-          : "bg-transparent py-5"
-      }`}
+ <header
+  className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+    scrolled
+      ? "bg-slate-950/90 backdrop-blur-md border-b border-slate-800/80 py-3 shadow-lg shadow-slate-950/20"
+      : "bg-transparent py-4"
+  }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
           {/* Logo */}
-          <div
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-4 cursor-pointer group"
-          >
-            {/* Logo */}
-            <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-2xl">
-              {/* Glow aksen sky-blue saat hover */}
-              <div className="absolute -inset-0.5 rounded-2xl bg-gradient-to-br from-sky-400/40 via-sky-500/10 to-transparent opacity-0 group-hover:opacity-100 blur-md transition-opacity duration-500" />
-
-              {/* Container utama */}
-              <div className="relative w-full h-full rounded-2xl overflow-hidden bg-gradient-to-br from-white via-white to-slate-100 ring-1 ring-white/60 group-hover:ring-sky-400/50 shadow-md shadow-slate-950/30 group-hover:shadow-lg group-hover:shadow-sky-500/20 flex items-center justify-center transition-all duration-300">
-                <img
-                  src="/portofolio/logo_nayakalabs.png"
-                  alt="Nayaka Labs"
-                  className="w-full h-full object-cover scale-110 group-hover:scale-125 group-hover:-rotate-2 transition-transform duration-500 ease-out"
-                />
-                {/* Highlight tipis di atas untuk efek glass */}
-                <div className="absolute inset-0 rounded-2xl bg-gradient-to-b from-white/40 via-transparent to-transparent pointer-events-none" />
-              </div>
-            </div>
-
-            {/* Text */}
-            <div>
-              <h1 className="font-bold text-white text-xl md:text-2xl leading-none">
-                Nayaka Labs
-              </h1>
-              <p className="text-slate-400 text-sm mt-1">
-                Premium Digital Studio
-              </p>
-            </div>
-          </div>
+   <div
+  onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+  className="relative shrink-0 w-[220px] h-14 md:h-16 cursor-pointer group overflow-visible"
+  aria-label="Nayaka Labs Home"
+>
+  <img
+    src="/portofolio/logo_nayakalabs_bgputih2.png"
+    alt="Nayaka Labs"
+   className="absolute left-0 top-1/2 -translate-y-1/2 h-24 md:h-28 lg:h-32 w-auto max-w-none object-contain"
+  />
+</div>
+         
 
           {/* Desktop Navigation Links */}
           <nav className="hidden md:flex items-center gap-8">

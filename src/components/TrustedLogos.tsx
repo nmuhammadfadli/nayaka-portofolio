@@ -8,23 +8,23 @@ export default function TrustedLogos() {
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
           {/* Label left */}
           <div className="flex items-center gap-2 text-slate-400 font-sans font-bold text-xs uppercase tracking-widest shrink-0">
-            <Shield className="w-4 h-4 text-sky-450" />
+            <Shield className="w-4 h-4 text-sky-400" />
             <span>Mitra Terpercaya Kami</span>
           </div>
 
           {/* Logo lineup */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12 items-center flex-1 lg:pl-12">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8 flex-1 lg:pl-12 items-stretch">
             {CLIENT_LOGOS.map((client, idx) => (
               <div
                 key={idx}
-                className="flex items-center justify-center transition-all duration-300 transform hover:scale-102 cursor-pointer group"
+                className="w-full h-full"
                 title={client.name}
               >
-                <div className="bg-slate-900 border border-slate-800/80 rounded-xl px-4 py-2.5 w-full text-center transition-colors group-hover:bg-slate-800/40 group-hover:border-sky-500/20">
-                  <span className="font-display font-black text-sm tracking-widest text-slate-500 group-hover:text-sky-400 transition-colors uppercase">
+                <div className="w-full aspect-[4/3] bg-slate-900 border border-slate-800/80 rounded-xl px-3 sm:px-4 py-3 text-center flex flex-col items-center justify-center transition-all duration-300 hover:bg-slate-800/40 hover:border-sky-500/20 hover:scale-[1.02] cursor-pointer">
+                  <span className="font-display font-black text-[12px] sm:text-sm tracking-widest text-white uppercase leading-tight line-clamp-2">
                     {client.logoText}
                   </span>
-                  <span className="text-[9px] text-slate-500 block font-light tracking-tight truncate">
+                  <span className="mt-1 text-[9px] sm:text-[10px] text-slate-500 block font-light tracking-tight truncate w-full">
                     {client.name}
                   </span>
                 </div>
