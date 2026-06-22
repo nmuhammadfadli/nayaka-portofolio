@@ -97,7 +97,7 @@ export const PORTFOLIOS: PortfolioItem[] = [
   {
     id: "erp-travel-umroh",
     title: "ERP Travel & Umroh",
-    category: "Web App",
+    category: ["Web App"],
     client: "Project Internal / Client Confidential",
     image: "/portofolio/travel.jpeg",
     summary:
@@ -110,7 +110,7 @@ export const PORTFOLIOS: PortfolioItem[] = [
   {
     id: "loka-kasir-pos",
     title: "Loka Kasir POS",
-    category: "Desktop App",
+    category: ["Mobile App","Desktop App"],
     client: "UMKM Bondowoso",
     image: "/portofolio/loka_kasir.png",
     summary:
@@ -123,7 +123,7 @@ export const PORTFOLIOS: PortfolioItem[] = [
   {
     id: "my-enviro-hub",
     title: "My Enviro Hub",
-    category: "Mobile App",
+    category: ["Web App","Mobile App"],
     client: "Outsourcing Operations",
     image: "/portofolio/enviro.jpg",
     summary:
@@ -136,7 +136,7 @@ export const PORTFOLIOS: PortfolioItem[] = [
     {
     id: "sip-coffee-trace",
     title: "SIP Coffee",
-    category: "Web App",
+    category: ["Web App", "Mobile App"],
     client: "Bondowoso Coffee Ecosystem",
     image: "/portofolio/sipcoffee.png",
     summary:
@@ -149,7 +149,7 @@ export const PORTFOLIOS: PortfolioItem[] = [
   {
     id: "pandawa-gis",
     title: "PANDAWA GIS",
-    category: "Web App",
+    category: ["Web App"],
     client: "Kabupaten Bondowoso",
     image: "/portofolio/pandawaa.png",
     summary:
@@ -159,19 +159,19 @@ export const PORTFOLIOS: PortfolioItem[] = [
     techs: ["GIS", "Visualization", "Web Mapping", "Data Dashboard"],
     link: "#",
   },
-  {
-    id: "greengrow-iot",
-    title: "GreenGrow IoT",
-    category: "Mobile App",
-    client: "AgriTech Monitoring",
-    image: "/portofolio/greengrow.jpg",
-    summary:
-      "Aplikasi monitoring lahan pertanian cerdas berbasis sensor IoT untuk membantu petani memantau kondisi lahan dan mengambil keputusan secara lebih tepat.",
-    metrics:
-      "Mendukung pemantauan lahan secara lebih efisien melalui integrasi data sensor dan tampilan mobile.",
-    techs: ["IoT", "Flutter", "Sensor Data", "Smart Farming"],
-    link: "#",
-  },
+ {
+  id: "pertanian-rajawali",
+  title: "GrowHarvest Platform",
+  category: ["Web App", "Mobile App"],
+  client: "Toko Pertanian Rajawali",
+  image: "/portofolio/rajawali.png",
+  summary:
+    "GrowHarvest merupakan platform digital berbasis web dan mobile yang dirancang untuk membantu operasional toko pertanian menjadi lebih efisien. Sistem ini memudahkan pengelolaan stok, pencatatan transaksi, perhitungan laba secara otomatis, serta penyajian laporan dan analisis bisnis yang mendukung pengambilan keputusan secara lebih cepat dan akurat.",
+  metrics:
+    "Digitalisasi proses operasional, peningkatan akurasi data transaksi, dan penyediaan laporan bisnis real-time untuk mendukung keputusan yang lebih tepat.",
+  techs: ["Laravel", "Flutter", "Firebase", "Web Dashboard"],
+  link: "#",
+}
 
 ];
 

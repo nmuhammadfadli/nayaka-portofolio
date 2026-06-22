@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { PORTFOLIOS } from "../data";
 import { ArrowUpRight, CheckCircle2, Cpu, Laptop, Activity } from "lucide-react";
+import { PortfolioCategory } from "../types";
 
 interface PortfolioProps {
   onContactClick: (planText: string) => void;
@@ -41,16 +42,22 @@ const PORTFOLIO_SPECS: Record<string, {
 };
 
 export default function Portfolio({ onContactClick }: PortfolioProps) {
-  const [filter, setFilter] = useState<string>("All");
+  const [filter, setFilter] = useState<PortfolioCategory | "All">("All");
   const [activeHighlightId, setActiveHighlightId] = useState<string>("svara");
 
-  const categories = ["All", "Web App", "Mobile App", "Desktop App"];
+const categories: ("All" | PortfolioCategory)[] = [
+  "All",
+  ...new Set(PORTFOLIOS.flatMap((item) => item.category)),
+];
 
-  const filteredPortfolios = filter === "All" 
-    ? PORTFOLIOS 
-    : PORTFOLIOS.filter(item => item.category === filter);
+const filteredPortfolios =
+  filter === "All"
+    ? PORTFOLIOS
+    : PORTFOLIOS.filter((item) =>
+        item.category.includes(filter)
+      );
 
-  // Retrieve matching detailed case specifications
+
   const activeSpec = PORTFOLIO_SPECS[activeHighlightId] || PORTFOLIO_SPECS["svara"];
   const activeItem = PORTFOLIOS.find(item => item.id === activeHighlightId) || PORTFOLIOS[0];
 
@@ -92,17 +99,17 @@ export default function Portfolio({ onContactClick }: PortfolioProps) {
 
             {/* Filtering buttons */}
             <div className="flex flex-wrap gap-2 justify-start md:justify-end shrink-0">
-              {categories.map((cat) => (
+              {categories.map((category) => (
                 <button
-                  key={cat}
-                  onClick={() => setFilter(cat)}
+                  key={category}
+                   onClick={() => setFilter(category)}
                   className={`text-xs font-bold py-2 px-4 rounded-full border cursor-pointer transition-all ${
-                    filter === cat 
+                    filter === category 
                       ? "bg-sky-500 text-slate-950 border-sky-500 shadow-md shadow-sky-500/10" 
                       : "bg-slate-950 border-slate-800 text-slate-400 hover:bg-slate-900"
                   }`}
                 >
-                  {cat === "All" ? "Semua Kategori" : cat}
+                  {category === "All" ? "Semua Kategori" : category}
                 </button>
               ))}
             </div>
@@ -135,8 +142,16 @@ export default function Portfolio({ onContactClick }: PortfolioProps) {
                         referrerPolicy="no-referrer"
                         className="w-full h-full object-cover group-hover:scale-103 transition-transform duration-500"
                       />
-                      <div className="absolute top-4 left-4 bg-slate-950/90 backdrop-blur-md text-white font-mono text-[9px] uppercase font-bold tracking-widest px-3 py-1.5 rounded-full border border-slate-800">
-                        {item.category}
+                     
+                      <div className="absolute top-4 left-4 flex flex-wrap gap-2">
+                        {item.category.map((cat) => (
+                          <span
+                            key={cat}
+                            className="bg-slate-950/90 backdrop-blur-md text-white font-mono text-[9px] uppercase font-bold tracking-widest px-3 py-1.5 rounded-full border border-slate-800"
+                          >
+                            {cat}
+                          </span>
+                        ))}
                       </div>
 
                       {isSelectedInSpotlight && (
@@ -165,7 +180,7 @@ export default function Portfolio({ onContactClick }: PortfolioProps) {
                               }}
                               className="text-[10px] text-slate-400 hover:text-sky-400 font-bold transition-colors cursor-pointer uppercase font-mono bg-slate-950 hover:bg-slate-850 px-2 py-0.5 rounded border border-slate-800"
                             >
-                              Detail Bedah Kasus &rarr;
+                              Lihat Detail&rarr;
                             </button>
                           )}
                         </div>

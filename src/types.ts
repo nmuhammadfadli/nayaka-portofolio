@@ -9,10 +9,17 @@ export interface Service {
   badge?: string;
 }
 
+export type PortfolioCategory =
+  | "Web App"
+  | "Mobile App"
+  | "Desktop App"
+  | "SEO Optimization"
+  | "UI/UX Design";
+
 export interface PortfolioItem {
   id: string;
   title: string;
-  category: "Web App" | "Mobile App" | "Desktop App" | "SEO Optimization" | "UI/UX Design";
+  category: PortfolioCategory[];
   client: string;
   image: string;
   summary: string;
